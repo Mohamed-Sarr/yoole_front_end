@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+header{
+    display: flex;
+    padding: 0px 50px;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: cornsilk;
+    background-color:#3ad1ff;
+}
+
+.menu{
+    display: flex;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    font-size: 20px;
+}
+section{
+    display: flex;
+    width: 100%;
+    height:90vh;
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar{
+    width: 2px;
+}
+::-webkit-scrollbar-track{
+    background: rgba(192, 192, 192, 0.849);
+}
+/******ON DESIGN LA PARTIE PROFIL**/
+section #profile{
+    display: flex;
+    width: 20%;
+    border-left:1px solid #dfdfdf8a ;
+}
+section #profile_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
+}
+section #profile_wrapper #avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+}
+section #profile_wrapper #avatar img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+section #profile_wrapper #main{
+    height: 50%;
+    line-height: 30px;
+    color: white;
+}
+section #profile_wrapper #main ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    list-style: none;
+    height: 100%;
+}
+section #profile_wrapper #main ul i{
+   padding: 0 5px;
+   text-decoration: none;
+}
+section #profile_wrapper #main ul i.fa-users{
+    color: #32cd3f;
+}
+section #profile_wrapper #main ul i.fa-user{
+    color: #32bbcd;
+}
+section #profile_wrapper #main ul i.fa-comments{
+    color: #d32525;
+}
+section #profile_wrapper #main ul i.fa-cog{
+    color: #4932cd;
+}
+section #profile_wrapper #main ul li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+}
+section #profile_wrapper #main ul li a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 5px 10px;
+    color: #221e1e;
+    border-radius: 5px;
+}
+section #profile_wrapper #main ul li.active a{
+    background-color: #fff;
+    font-weight: bold;
+} 
+/********************************/
+
+section #contact{
+    border-left: 1px solid #b1b1b1;
+    width: 20%;
+    height: 100%;
+}
+section .entete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    border-bottom: 1px solid #c7c7c7c9;
+    width: 100%;
+}
+
+section .entete form{
+    width: 100%;
+    display: flex;
+}
+section .entete form input{
+    width: 80%;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+}
+section .entete form button{
+    width: 20%;
+    border: none;
+    color: #959595;
+    font-size: 20px;
+}
+section #contact .user{
+    height: 90%;
+    overflow-y: scroll;
+}
+section #contact .user .carte{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding: 0 30px;
+    height: 20%;
+    width: 100%;
+    border-bottom: 1px solid rgba(206, 206, 206, 0.404);
+    cursor: pointer;
+}
+
+.active_2{
+    background-color: white;
+}
+section #contact .user .carte img{
+    margin-right: 15px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+section #contact .user .carte .green{
+    color: #a6ff22;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1em;
+    border-radius: 50%;
+}
+section #contact .user .carte .orange{
+    color: #ffc422;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1em;
+    border-radius: 50%;
+}
+section #contact .user .carte .red{
+    color: #ff2222;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 1em;
+    border-radius: 50%;
+}
+section #contact .user .carte img{
+  height: 60px;
+  width: 60px;
+  border-radius:50%;
+}
+section #contact .user .carte .personel{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/**************************/
+section #message{
+    width: 60%;
+    border-left:1px solid rgba(190, 190, 190, 0.856) ;
+}
+section .entete.deux{
+    padding: 0 20px;
+    border-left:#c2c2c2c2 ;
+}
+section .entete.deux a{
+    text-decoration: none;
+    color: #a5a5a5f5;
+}
+section #message .content{
+    height: 80%;
+}
+section .foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    border-top: 1px solid #bdbdbdc5;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+}
+section .foot .texto{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding-left:30px ;
+    border: none;
+}
+section .foot button{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -20px;
+    right: 20px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    font-size: larger;  
+    background-color:#3ad1ff;
+    transition: 1s;
+}
+section .foot button:hover{
+    text-shadow:  1px 1px 10px white;
+    box-shadow: 1px 1px 10px #3ad1ff;
+}
+
+section #message .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:stretch;
+    padding-left: 20px;
+}
+
+
+section #message .content .left_text{
+    display: flex;
+    flex-direction: row;
+}
+section #message .content .right_text{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-left: 250px;
+}
+section #message .content .right_text.inbox{
+    display: flex;
+    flex-direction: column;
+    
+}
+section #message .content .right_text .inbox p{
+    display: inline-block;
+    padding: 10px;
+    background-color:#3ad1ff;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+section #message .content .left_text .inbox{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section #message .content .left_text .inbox p{
+    display: inline-block;
+    padding: 10px;
+    background-color:#dbdada;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+section #message .content img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
