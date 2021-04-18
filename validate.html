@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creer un client</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets\bootstrap\bootstrap.css">
+    <script src="../assets\bootstrap\bootstrap.js"></script>
+</head>
+<body>
+
+<!-- <nav class="nav nav-underline" aria-label="Secondary navigation">
+    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+    <a class="nav-link" href="#">
+      Friends
+      <span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
+    </a>
+    <a class="nav-link" href="#">Explore</a>
+    <a class="nav-link" href="#">Suggestions</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Link</a>
+  </nav> -->
+
+
+<main style="width:500px" class="container">
+<?php 
+  echo str_replace("hello","ok","");
+?>
+  <div style="width:500px"  class="card starter-template text-center py-5 px-3">
+   <div class="box_center card-body">
+     <h3>S'inscrire</h3>
+    <form > 
+
+        <label for="">Nom :</label>
+        <input name="nom" id="pseudo" onclick=onlyNumber("pseudo")  required minlenght="2" maxlenght="50" type="text">
+        <label for="">prenom :</label>
+        <input id="" name="prenom" minlenght="2" maxlenght="50" type="text">
+        <label for="">adresse :</label>
+        <select name="adress" required id="adress">
+          <option value="Dakar">Dakar</option>
+          <option value="St Louis">St Louis</option>
+          <option value="Thies">Thies</option>
+          <option value="Matam">Matam</option>
+          <option value="Ziguinchor">Ziguinchor</option>
+        </select>
+        <br>
+        <label for="">email / login :</label>
+        <input name="email" type="email">
+        <label for="">tel :</label>
+        <input name="tel" type="tel">
+        <label for="">Date de naissance :</label>
+        <input type="date" value="<?php echo date('Y-m-d'); ?>" name="date_naiss">
+        <div class="div form-group"> 
+            <h4>Sexe</h4>
+          <label for="femme">femme : </label>
+          <input type="radio" name="sexe" value="femme"  id="femme">
+          <label for="homme">homme : </label>
+          <input type="radio" name="sexe"  value="homme" id="homme"> 
+        </div>
+         <label for="">note :</label>
+        <Textarea class="input-group" name="note" type="text"></Textarea>
+        <label for="">cni :</label>
+        <input  id="txtChar" class="form-input" name="cni" type="text">
+        <br>
+        <label for=""> Password :</label>
+          <input  id="pwd" class="form-input"  name="pwd" type="password">
+          <i id ="view_password" style="padding:5px;color:white;background-color:grey">Voir</i>
+          <small id="message1"></small>
+        <br>
+        <label for=""> Confirmation  :</label>
+          <input  id="cpwd" class="form-input"  name="cpwd" type="password">
+          <small id="message2"></small>
+        <br>
+        
+       <div class="form-group">
+   
+<!--  -->
+          <!-- <button class="btn btn-primary" type="submit" name="add_client">Creer</button> -->
+          <i class="btn btn-primary"  id="validate">Valider</i>
+       </div>
+    </div>
+        <!-- </form> -->
+</div>
+  </div>
+
+</main>
+
+
+    
+</body>
+
+</html>
+<script>
+var eyes = document.getElementById("view_password");
+var ceyes = document.getElementById("cview_password");
+var pass1 = document.getElementById("pwd");
+var pass2 = document.getElementById("cpwd");
+eyes.addEventListener('click',function () {
+      this.innerHTML ="Caché"
+
+    if (pass1.type == "password" && pass2.type == "password" ) {
+      pass1.type="";
+      pass2.type="";
+    }else{
+      this.innerHTML ="Voir"
+
+      pass1.type="password";
+      pass2.type="password";
+    }
+})
+
+
+
+function onlyNumber(id) {
+   
+  var obj = document.getElementById(id);
+  obj.value = "On ma clické ";
+
+}
+onlyNumber("pseudo");
+
+</script>
+<script>
+
+var validate_btn = document.getElementById("validate");
+var pw1 = document.getElementById("pwd").value;
+    var pw2 = document.getElementById("cpwd").value;
+
+
+    validate_btn.addEventListener('click',function () {
+  
+    //check empty confirm password field
+    if(pw2 == "") {
+      document.getElementById("message2").innerHTML = "**Confirem un mot de passe please!";
+      return false;
+    } 
+   
+    //minimum password length validation
+    if(pw1.length < 8) {
+      document.getElementById("message1").innerHTML = "**Doit contenir au Maximum 8 characters";
+      return false;
+    }
+
+    //maximum length of password validation
+    if(pw1.length > 15) {
+      document.getElementById("message1").innerHTML = "**Mot de passe ne doit pas exceder 15 characters";
+      return false;
+    }
+  
+    if(pw1 != pw2) {
+      document.getElementById("message2").innerHTML = "**Passwords are not same";
+      return false;
+    } else {
+      alert ("Your password created successfully");
+      document.write("JavaScript form has been submitted successfully");
+    }
+    });
+
+
+ 
+</script>
